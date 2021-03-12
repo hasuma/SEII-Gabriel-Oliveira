@@ -1,1 +1,3 @@
-Repositório contendo as atividades desenvolvidas durante o curso de Sistemas Embarcados II
+# Sistemas Embarcados II <br/>
+
+<p>Repositório contendo as atividades desenvolvidas durante o curso de Sistemas Embarcados II</p>
