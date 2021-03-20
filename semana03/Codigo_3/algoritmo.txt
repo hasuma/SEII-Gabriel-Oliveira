@@ -1,0 +1,13 @@
+Para um número par de discos:
+Faça o movimento permitido entre os pinos A e B (em qualquer direção),
+Faça o movimento permitido entre os pinos A e C (em qualquer direção),
+Faça o movimento permitido entre as estacas B e C (em qualquer direção),
+Repita até completar.
+
+Para um número ímpar de discos:
+Faça o movimento permitido entre os pinos A e C (em qualquer direção),
+Faça o movimento permitido entre os pinos A e B (em qualquer direção),
+Faça o movimento permitido entre as estacas B e C (em qualquer direção),
+Repita até completar.
+
+Em cada caso, um total de ((2^n) – 1) movimentos são feitos.
