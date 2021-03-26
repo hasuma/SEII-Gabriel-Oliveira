@@ -1,7 +1,7 @@
-import concurrent.futures
-import time
+import concurrent.futures  # modulo que fornece interface para a execução assincrona realizada na forma de thread ou processos
+import time  # modulo que fornece suporte para trabalhar com funções relacionadas a tempo
 
-import requests
+import requests  # modulo que fornece suporte para solicitações HTTP
 
 img_urls = [
     'https://images.unsplash.com/photo-1516117172878-fd2c41f4a759',
@@ -21,22 +21,29 @@ img_urls = [
     'https://images.unsplash.com/photo-1549692520-acc6669e2f0c'
 ]
 
-t1 = time.perf_counter()
+t1 = time.perf_counter()  # Inicio do contador de performace
 
 
+# loop/função que recupera o conteudo da URL e escreve em um arquivo de mesmo nome. (download da imagem)
 # for img_url in img_urls:
 def download_image(img_url):
-    img_bytes = requests.get(img_url).content
-    img_name = img_url.split('/')[3]
-    img_name = f'{img_name}.jpg'
-    with open(img_name, 'wb') as img_file:
+    img_bytes = requests.get(img_url).content  # recupera o conteudo da URL
+    img_name = img_url.split(
+        '/'
+    )[3]  # separa a string considerando como separador a /, e armazena o nome da imagem (4 item apos o split)
+    img_name = f'{img_name}.jpg'  # adiciona o tipo do arquivo baixado no caso é uma imagem jpg
+    with open(img_name,
+              'wb') as img_file:  # cria um arquivo e salva o conteudo da URL
         img_file.write(img_bytes)
         print(f'{img_name} was downloaded...')
 
 
-with concurrent.futures.ThreadPoolExecutor() as executor:
-    executor.map(download_image, img_urls)
+with concurrent.futures.ThreadPoolExecutor(
+) as executor:  # cria um executor assincrono na forma da thread
+    executor.map(
+        download_image,
+        img_urls)  # executor baixa a lista de imagens concorrentemente
 
-t2 = time.perf_counter()
+t2 = time.perf_counter()  # fim do contador de performance
 
 print(f'Finished in {t2-t1} seconds')
