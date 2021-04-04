@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 {
     if (argc < 3 || argc > 4) // Test for correct number of arguments
     DieWithUserMessage("Parameter(s)",
-            "<Server Address> <Echo Word> [<Server Port>]");
+            "<Server Address> <Input file name> [<Server Port>]");
 
     char *servIP = argv[1];     // First arg: server IP address (dotted quad)
     char *inPathFile = argv[2]; // Second arg: string to echo
