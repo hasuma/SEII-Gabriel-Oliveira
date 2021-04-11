@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javaScript" src="calculadora.js" ></script>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="calc">
+        <div id="calculadora">
+            <div id="visor_completo">
+                <div id="visor_equacao">
+                    <input type="text" id="visor_eq" name="visor_eq">
+                </div>
+                <div id="visor_resultado">
+                    <input type="text" id="visor_res" name="visor_res">
+                </div>
+            </div>
+            <div id="primeira">
+                <input id="zero" type="button" class="botao_num" onclick="botao(0)">
+                <input id="um" type="button" class="botao_num" onclick="botao(1)">
+                <input id="dois" type="button" class="botao_num" onclick="botao(2)">
+                <input id="tres" type="button" class="botao_num" onclick="botao(3)">
+                <input id="quatro" type="button" class="botao_num" onclick="botao(4)">
+                <input id="cinco" type="button" class="botao_num" onclick="botao(5)">
+                <input id="seis" type="button" class="botao_num" onclick="botao(6)">
+                <input id="sete" type="button" class="botao_num" onclick="botao(7)">
+                <input id="oito" type="button" class="botao_num" onclick="botao(8)">
+                <input id="nove" type="button" class="botao_num" onclick="botao(9)">
+                
+            </div>
+            <div id="segunda">
+                <input type="button"  class="botao_vezes" onclick="botao('*')">
+                <input type="button"  class="botao_barra" onclick="botao('/')">
+                <input type="button"  class="botao_mais" onclick="botao('+')">
+                <input type="button"  class="botao_menos" onclick="botao('-')">
+                <input type="button"  class="botao_virgula" onclick="botao('.')">
+            </div>
+            <div id="terceiro">
+                <input type="button"  class="botao_apagar" onclick="resetar()">
+                <input type="button"  class="botao_del" onclick="deletar()">
+                <input type="button"  class="botao_par_esq" onclick="botao('(')">
+                <input type="button"  class="botao_par_dir" onclick="botao(')')">
+                <input type="button"  class="botao_igual" onclick="calcular()">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
