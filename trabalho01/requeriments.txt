@@ -1,0 +1,6 @@
+pymunk
+pyglet
+numpy
+matplotlib
+sympy
+logging
