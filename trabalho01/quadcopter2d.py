@@ -1,5 +1,6 @@
-import logging
 import math
+import logging
+
 
 import pyglet
 from pyglet.window import key
