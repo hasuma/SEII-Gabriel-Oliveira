@@ -70,8 +70,8 @@ if __name__ == '__main__':
     y0 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
     pdy, pdz, pdΘ, refy, refz = (6.0, 4.5), (12, 6.5), (3.5, 0.14), (1, 0, 0), (1, 0, 0)
     constants = dict(
-        l=0.25,  # 15 cm from CoM to rotor
-        m=0.25,  # 200 g
+        l=0.25,  # cm from CoM to rotor
+        m=0.25,  # g
         I=0.001,  # kg*m^2
         g=9.81  # gravity, m/s^2
     )
